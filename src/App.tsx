@@ -4,11 +4,12 @@ import './App.css';
 import HomePage from "./pages/homepage/homepage.component"
 import HatsPage from "./pages/hatspage/hatspage.component";
 import ShopPage from './pages/shoppage/shoppage.component'
-
+import Header from './components/header/header.component'
 
 const App: React.FC = () => {
   return (
     <div>
+        <Header />
       <Switch>
       <Route exact path='/' component={HomePage
       }/>
