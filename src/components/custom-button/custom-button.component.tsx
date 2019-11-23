@@ -3,13 +3,15 @@ import './custom-button.styles.scss';
 
 
 interface IProps{
-    type:any;
+    type?:any;
     children:string;
+    onClick?: () => Promise<firebase.auth.UserCredential>; 
+    isGoogleSignIn?:boolean;
 }
 
-const CustomButton: React.FC<IProps> = ({children, ...otherprops}) =>{
+const CustomButton: React.FC<IProps> = ({children, isGoogleSignIn, ...otherprops}) =>{
     return(
-        <button className="custom-button" {...otherprops}>{children}</button>
+        <button className={`${isGoogleSignIn ? 'google-sign-in': ''} custom-button`}   {...otherprops}>{children}</button>
     )
 }
 
