@@ -13,6 +13,8 @@ const Header: React.FC = () =>{
         <div className="options">
             <Link className="option" to="/shop">SHOP</Link>
             <Link className="option" to="/shop">CONTACT</Link>
+            <Link className="option" to="/signin">SIGN IN</Link>
+
 
         </div>
         </div>
